@@ -6,7 +6,7 @@ export class Custom {
 
     get currentQuote() {
         return /*html*/`
-        <div id="quote-text" class="mb-0 text-light fs-5 fw-bold textShadow quote-text">
+        <div id="quote-text" class="mb-0 text-light fs-5 fw-bold textShadow quote-text rounded p-3">
             <p>"${this.quote}"</p>
             <span class="author-text">${this.author}</span>
         </div>
