@@ -11,8 +11,10 @@ function drawUser() {
   const userAvatar = avatarTemplate(account)
   const button = authButton(user)
   const template = /* html */ `
-    ${userAvatar}
-    ${button}
+  <div style="display: flex; align-items: center; justify-content: center; margin-right: 1em;">
+    <div>${userAvatar}</div>
+    <span>${button}</span>
+  </div>
   `
   // @ts-ignore
   document.getElementById('authstate').innerHTML = template

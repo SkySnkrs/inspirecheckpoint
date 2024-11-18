@@ -7,8 +7,12 @@ class ObservableAppState extends EventEmitter {
   /**@type {import('./models/Account.js').Account | null} */
   account = null
 
+  /**@type {import('./models/Weather.js').Weather | null} */
   weather = null
+
   time = null
+  quote = null
+  img = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())

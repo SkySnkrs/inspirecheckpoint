@@ -2,7 +2,7 @@ export class Weather {
 
     constructor(data) {
         this.icon = data.weather.icon
-        this.description = data.weather[0].main
+        this.description = data.weather[0].description
         this.temperature = data.main.temp
     }
 
