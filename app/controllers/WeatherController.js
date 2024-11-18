@@ -6,6 +6,7 @@ import { setHTML } from "../utils/Writer.js";
 export class WeatherController {
     constructor() {
         this.drawWeather()
+        this.addToggleListener();
     }
 
     async drawWeather() {
@@ -16,6 +17,19 @@ export class WeatherController {
         } catch (error) {
             Pop.error(error)
             console.error(error);
+        }
+    }
+
+    addToggleListener() {
+        const toggle = document.getElementById("unitToggle");
+        if (toggle) {
+            toggle.addEventListener("change", () => {
+                // Toggle the unit in the Weather model
+                AppState.weather.toggleUnit();
+
+                // Re-render the weather info with the updated unit
+                setHTML('weatherInfo', AppState.weather.weatherInfo);
+            });
         }
     }
 }

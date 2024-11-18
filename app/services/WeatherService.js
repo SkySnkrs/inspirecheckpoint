@@ -13,6 +13,7 @@ class WeatherService {
         console.log(AppState.weather)
     }
 
+
 }
 
 export const weatherService = new WeatherService()
