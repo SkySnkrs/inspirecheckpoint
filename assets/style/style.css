@@ -1,4 +1,10 @@
 /* BASIC STYLES HERE */
+
+:root {
+  --background-color: hsla(0, 0%, 0%, 0.5);
+}
+
+
 .profile-picture {
   height: 200px;
   max-width: 100%;
@@ -8,4 +14,40 @@
 
 .profile-picture.profile-picture-sm {
   height: 64px;
+}
+
+body {
+  background: url(https://images.unsplash.com/photo-1477322524744-0eece9e79640) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+footer {
+  min-height: 20dvh;
+  color: white;
+  background-color: var(--background-color);
+  backdrop-filter: blur(5px);
+  position: relative;
+  align-content: center;
+}
+
+footer>section {
+  justify-content: space-between;
+  align-items: center;
+}
+
+#weatherTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
 }

@@ -40,4 +40,5 @@ export class Account {
   get displayName() {
     return this.nickname || this.name
   }
+
 }
