@@ -21,6 +21,8 @@ class CustomService {
 
     async getBackgroundImage() {
         const response = await api.get('api/images')
+        const image = response.data.largeImgUrl
+        return image
     }
 
     async getQuote() {

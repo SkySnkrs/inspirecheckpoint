@@ -24,10 +24,8 @@ export class WeatherController {
         const toggle = document.getElementById("unitToggle");
         if (toggle) {
             toggle.addEventListener("change", () => {
-                // Toggle the unit in the Weather model
                 AppState.weather.toggleUnit();
 
-                // Re-render the weather info with the updated unit
                 setHTML('weatherInfo', AppState.weather.weatherInfo);
             });
         }

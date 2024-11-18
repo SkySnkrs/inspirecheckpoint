@@ -17,8 +17,6 @@
 }
 
 body {
-  background: url(https://images.unsplash.com/photo-1477322524744-0eece9e79640) no-repeat center center fixed;
-  background-size: cover;
   margin: 0;
   height: 100vh;
   width: 100%;
@@ -129,7 +127,6 @@ input:checked+.slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -140,10 +137,18 @@ input:checked+.slider:before {
 
 .offcanvas-body {
   padding-bottom: 1rem;
-  /* Optional: Add padding at the bottom */
 }
 
 .text-center label.switch {
   margin-bottom: 1rem;
-  /* Add spacing if needed */
+}
+
+
+.offcanvas {
+  background-color: var(--background-color);
+  color: white;
+}
+
+.menuBtn {
+  background-color: white;
 }
