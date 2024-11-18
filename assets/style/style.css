@@ -26,6 +26,7 @@ body {
 
 footer {
   min-height: 20dvh;
+  border: 2px solid white;
   color: white;
   background-color: var(--background-color);
   backdrop-filter: blur(5px);
@@ -41,8 +42,9 @@ footer>section {
 #weatherTab {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0.5em;
+  border: 2px solid white;
 }
 
 .weather-info {

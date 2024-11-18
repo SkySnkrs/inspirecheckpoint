@@ -8,12 +8,12 @@ export class Weather {
 
     get weatherInfo() {
         return /*html*/`
-        <div id="weatherTab" class="rounded">
+        <div id="weatherTab" class="rounded m-3">
           <div class="weather-info">
             <p class="m-0">${this.temperature}</p>
             <p class="m-0">${this.description}</p>
           </div>
-          <img src='${this.icon}' class="h-45">
+          <img src='${this.icon}' class="h-45 mx-2">
         </div>
         `
     }

@@ -8,6 +8,7 @@ class ObservableAppState extends EventEmitter {
   account = null
 
   weather = null
+  time = null
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
