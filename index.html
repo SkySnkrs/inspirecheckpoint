@@ -36,7 +36,7 @@
         <button type="button" class="btn-close menuBtn text-reset m-2" data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="p-3">
+      <div id="toDoFormContainer" class="p-3" style="display: none;">
         <form class="form-control mt-4 p-2 bgBlack" onsubmit="app.TodoController.createToDo()">
           <label for="toDoDescription" class="p-2">To Do Description</label>
           <input class="form-control" type="text" name="description" id="toDoDescription" maxlength="100"
@@ -45,10 +45,13 @@
           <button type="submit" class="btn btn-success form-control mt-2">Create To Do</button>
         </form>
       </div>
+
+      <div id="signInMessage" class="p-3">
+        <p>Please sign in to create and save To Do's</p>
+      </div>
       <div class="offcanvas-body mb-2 d-flex flex-column p-3">
-        <div class="flex-grow-1">
-          <div id="toDoList" class="text-start bgBlack p-3">
-          </div>
+        <div id="toDoList" class="flex-grow-1">
+
         </div>
         <div class="text-center mt-3">
           <p>Turn On For Celsius Temperatures</p>

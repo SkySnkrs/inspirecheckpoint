@@ -8,6 +8,11 @@ export class TodoController {
         AppState.on('account', this.getTodos)
         AppState.on('todo', this.drawToDo)
         AppState.on('todo', this.toDoCount)
+        AppState.on('account', this.displayToDoForm)
+    }
+
+    async displayToDoForm() {
+        await todoService.displayToDoForm()
     }
 
     drawToDo() {
