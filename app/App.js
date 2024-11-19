@@ -1,5 +1,6 @@
 import { AuthController } from './controllers/AuthController.js';
 import { CustomController } from './controllers/CustomController.js';
+import { TodoController } from './controllers/TodoController.js';
 import { WeatherController } from './controllers/WeatherController.js';
 
 import { router } from './router-config.js';
@@ -10,7 +11,7 @@ class App {
   AuthController = new AuthController()
   WeatherController = new WeatherController()
   CustomController = new CustomController()
-
+  TodoController = new TodoController()
 
   constructor() {
     if (USE_ROUTER) {

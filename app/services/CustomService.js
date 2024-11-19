@@ -32,6 +32,21 @@ class CustomService {
         console.log(AppState.quote)
     }
 
+    updateCharCount() {
+        const input = document.getElementById('toDoDescription');
+        const charCount = document.getElementById('charCount');
+
+        if (input instanceof HTMLInputElement && charCount instanceof HTMLElement) {
+            input.addEventListener('input', () => {
+                const remaining = 100 - input.value.length;
+                charCount.textContent = `${remaining} characters remaining`;
+            });
+        } else {
+            console.error('Required elements are not of the correct type.');
+        }
+    }
+
+
 
 }
 

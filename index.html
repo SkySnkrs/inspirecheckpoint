@@ -25,23 +25,32 @@
       </a>
     </div>
     <div>
-      <p class="mb-0 mx-4 fs-6 fw-bold"> - Tasks Remaining</p>
+      <p class="mb-0 mx-4 fs-6 fw-bold"><span id="totalToDos"></span> - Tasks Remaining</p>
     </div>
   </header>
 
   <section>
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasMenuLabel">To Do List</h5>
-        <button type="button" class="btn-close menuBtn text-reset" data-bs-dismiss="offcanvas"
+      <div class="offcanvas-header bgBlack">
+        <h5 class="offcanvas-title fs-3 fw-bold underline p-2" id="offcanvasMenuLabel">To Do List</h5>
+        <button type="button" class="btn-close menuBtn text-reset m-2" data-bs-dismiss="offcanvas"
           aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body d-flex flex-column">
-        Clean The House
+      <div class="p-3">
+        <form class="form-control mt-4 p-2 bgBlack" onsubmit="app.TodoController.createToDo()">
+          <label for="toDoDescription" class="p-2">To Do Description</label>
+          <input class="form-control" type="text" name="description" id="toDoDescription" maxlength="100"
+            oninput="updateCharCount()">
+          <small id="charCount" class="form-text text-muted">100 characters remaining</small>
+          <button type="submit" class="btn btn-success form-control mt-2">Create To Do</button>
+        </form>
+      </div>
+      <div class="offcanvas-body mb-2 d-flex flex-column p-3">
         <div class="flex-grow-1">
-
+          <div id="toDoList" class="text-start bgBlack p-3">
+          </div>
         </div>
-        <div class="text-center">
+        <div class="text-center mt-3">
           <p>Turn On For Celsius Temperatures</p>
           <label class="switch">
             <input type="checkbox" id="unitToggle">

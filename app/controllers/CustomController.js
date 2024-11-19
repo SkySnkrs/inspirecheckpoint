@@ -8,6 +8,7 @@ export class CustomController {
         setInterval(this.drawTime, 1000)
         this.drawQuote()
         this.backgroundImage()
+        customService.updateCharCount()
     }
 
     async drawTime() {

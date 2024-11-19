@@ -13,6 +13,8 @@ class ObservableAppState extends EventEmitter {
   time = null
   quote = null
   img = null
+
+  todo = []
 }
 
 export const AppState = createObservableProxy(new ObservableAppState())
